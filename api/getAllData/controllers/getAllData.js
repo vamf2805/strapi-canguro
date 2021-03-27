@@ -11,6 +11,7 @@ const getHomeData = async (ctx) => {
         let app = await strapi.query('app').find({})
         let canguroInTheWorld = await strapi.query('canguro-en-el-mundo').find({})
         let blogs = await strapi.query('blog').find({_limit:4})
+        let states = await strapi.query('estados').find({})
 
         empresa = deteleCreatedBy(empresa)
         banners = deteleCreatedBy(banners)
@@ -20,6 +21,7 @@ const getHomeData = async (ctx) => {
         identities = deteleCreatedBy(identities)
         canguroInTheWorld = deteleCreatedBy(canguroInTheWorld)
         blogs = deteleCreatedBy(blogs)
+        states = deteleCreatedBy(states)
         
 
 
@@ -32,6 +34,7 @@ const getHomeData = async (ctx) => {
             app: app[0],
             canguroInTheWorld,
             blogs,
+            states
         }
     } catch (error) {
         throw error
@@ -43,6 +46,7 @@ const getHomeData = async (ctx) => {
 const deteleCreatedBy = (objs) => {
     return objs.map(obj => {
         obj.created_by = undefined
+        obj.updated_by = undefined
         return obj
     })
 }
