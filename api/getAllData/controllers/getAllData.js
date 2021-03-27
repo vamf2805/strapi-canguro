@@ -3,14 +3,26 @@
 const getHomeData = async (ctx) => {
 
     try {
-        const empresa = await strapi.query('empresa').find({})
-        const banners = await strapi.query('banners').find({})
-        const brands = await strapi.query('nuestras-marcas').find({}) 
-        const allies = await strapi.query('aliados').find({})
-        const identities = await strapi.query('identidades').find({})
-        const app = await strapi.query('app').find({})
-        const canguroInTheWorld = await strapi.query('canguro-en-el-mundo').find({})
-        const blogs = await strapi.query('blog').find({_limit:4})
+        let empresa = await strapi.query('empresa').find({})
+        let banners = await strapi.query('banners').find({})
+        let brands = await strapi.query('nuestras-marcas').find({}) 
+        let allies = await strapi.query('aliados').find({})
+        let identities = await strapi.query('identidades').find({})
+        let app = await strapi.query('app').find({})
+        let canguroInTheWorld = await strapi.query('canguro-en-el-mundo').find({})
+        let blogs = await strapi.query('blog').find({_limit:4})
+
+        empresa = deteleCreatedBy(empresa)
+        banners = deteleCreatedBy(banners)
+        brands = deteleCreatedBy(brands)
+        allies = deteleCreatedBy(allies)
+        app = deteleCreatedBy(app)
+        identities = deteleCreatedBy(identities)
+        canguroInTheWorld = deteleCreatedBy(canguroInTheWorld)
+        blogs = deteleCreatedBy(blogs)
+        
+
+
         return {
             empresa: empresa[0],
             banners,
@@ -26,6 +38,13 @@ const getHomeData = async (ctx) => {
 
     }
 
+}
+
+const deteleCreatedBy = (objs) => {
+    return objs.map(obj => {
+        obj.created_by = undefined
+        return obj
+    })
 }
 
 module.exports = {
