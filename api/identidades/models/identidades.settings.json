@@ -18,7 +18,7 @@
     "descripcion": {
       "type": "text"
     },
-    "imagen": {
+    "logo": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -29,6 +29,10 @@
     },
     "color_fondo": {
       "type": "string"
+    },
+    "nuestras_tiendas": {
+      "collection": "nuestras-tiendas",
+      "via": "identidades"
     }
   }
 }

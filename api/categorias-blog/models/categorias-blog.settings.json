@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias_blogs",
+  "info": {
+    "name": "Categorías Blog"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "blogs": {
+      "via": "categorias_blog",
+      "collection": "blog"
+    }
+  }
+}

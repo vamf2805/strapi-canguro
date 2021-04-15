@@ -26,6 +26,38 @@
     "estado": {
       "model": "estados",
       "via": "nuestras_tiendas"
+    },
+    "identidades": {
+      "via": "nuestras_tiendas",
+      "collection": "identidades",
+      "dominant": true
+    },
+    "tienda": {
+      "type": "string"
+    },
+    "galeria": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "horario": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "imagen360": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

@@ -14,9 +14,6 @@
     "Direccion": {
       "type": "richtext"
     },
-    "Descripcion": {
-      "type": "richtext"
-    },
     "Correo": {
       "type": "email"
     },
