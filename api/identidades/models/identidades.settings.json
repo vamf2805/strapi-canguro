@@ -31,8 +31,8 @@
       "type": "string"
     },
     "nuestras_tiendas": {
-      "collection": "nuestras-tiendas",
-      "via": "identidades"
+      "via": "identidades",
+      "collection": "nuestras-tiendas"
     }
   }
 }

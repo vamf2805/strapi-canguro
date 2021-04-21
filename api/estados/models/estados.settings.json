@@ -17,6 +17,9 @@
     "nuestras_tiendas": {
       "via": "estado",
       "collection": "nuestras-tiendas"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }

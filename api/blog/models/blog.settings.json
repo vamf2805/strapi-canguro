@@ -32,8 +32,11 @@
       "required": true
     },
     "categorias_blog": {
-      "model": "categorias-blog",
-      "via": "blogs"
+      "via": "blogs",
+      "model": "categorias-blog"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }

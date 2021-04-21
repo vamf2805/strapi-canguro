@@ -18,7 +18,6 @@ const getHomeData = async (ctx) => {
         brands = deteleCreatedBy(brands)
         allies = deteleCreatedBy(allies)
         app = deteleCreatedBy(app)
-        identities = deteleCreatedBy(identities)
         canguroInTheWorld = deteleCreatedBy(canguroInTheWorld)
         blogs = deteleCreatedBy(blogs)
         states = deteleCreatedBy(states)
@@ -30,7 +29,6 @@ const getHomeData = async (ctx) => {
             banners,
             brands,
             allies,
-            identities,
             app: app[0],
             canguroInTheWorld,
             blogs,

@@ -28,8 +28,8 @@
       "via": "nuestras_tiendas"
     },
     "identidades": {
-      "via": "nuestras_tiendas",
       "collection": "identidades",
+      "via": "nuestras_tiendas",
       "dominant": true
     },
     "tienda": {
@@ -58,6 +58,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
