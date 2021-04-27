@@ -10,7 +10,7 @@ const getHomeData = async (ctx) => {
         let identities = await strapi.query('identidades').find({})
         let app = await strapi.query('app').find({})
         let canguroInTheWorld = await strapi.query('canguro-en-el-mundo').find({})
-        let blogs = await strapi.query('blog').find({_limit:4})
+        let blogs = await strapi.query('blog').find({_limit:2})
         let states = await strapi.query('estados').find({})
 
         empresa = deteleCreatedBy(empresa)
