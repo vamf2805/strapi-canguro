@@ -24,8 +24,8 @@
       "private": false
     },
     "estado": {
-      "model": "estados",
-      "via": "nuestras_tiendas"
+      "via": "nuestras_tiendas",
+      "model": "estados"
     },
     "identidades": {
       "collection": "identidades",

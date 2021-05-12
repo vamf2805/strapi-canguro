@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "banners",
   "info": {
-    "name": "Banners"
+    "name": "Banners",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,12 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "titulo": {
-      "type": "string"
-    },
-    "descripcion": {
-      "type": "text"
-    },
     "banner": {
       "model": "file",
       "via": "related",

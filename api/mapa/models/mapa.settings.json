@@ -1,9 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "estados",
+  "kind": "singleType",
+  "collectionName": "mapas",
   "info": {
-    "name": "Estados",
-    "description": ""
+    "name": "mapa"
   },
   "options": {
     "increments": true,
@@ -11,17 +10,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "nombre": {
-      "type": "string"
-    },
-    "nuestras_tiendas": {
-      "collection": "nuestras-tiendas",
-      "via": "estado"
-    },
-    "slug": {
-      "type": "string"
-    },
-    "imagen": {
+    "mapa": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
